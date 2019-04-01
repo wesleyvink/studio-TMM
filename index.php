@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
     <script src="main.js"></script>
 </head>
 <body>
@@ -22,12 +22,15 @@ $('.smooth').on('click', function() {
 });
 </script>
 <div id="nav">
+  <span id="struc">
+  <img src="afb\SUMMA_ECHT2473_Summa_Fashion_sticker_40x30mm-HR.png" height="100" />
      <ul>
          <li><a href="#home">home</a></li>
          <li><a href="#opdrachten">opdrachten</a></li>
          <li><a href="#agenda">agenda</a></li>
          <li><a href="#archief">archief</a></li>
      </ul>
+</span>
 </div>
 <div id="page1">
   <a id="home" class="smooth"></a>

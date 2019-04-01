@@ -1,0 +1,15 @@
+body {
+    background-color: gray;
+}
+#nav {
+    background-color: white;
+}
+#nav li{
+    display: inline;
+    text-decoration: none;
+    margin-left: 5%
+}
+#nav a{
+    background-color: pink;
+    padding: 2px
+}
