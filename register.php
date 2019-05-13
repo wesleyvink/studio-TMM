@@ -1,17 +1,17 @@
 <?php require "dbs/dbconnect.php"; ?>
 <form action="register.php" method="post">
     Voornaam
-    <input type="text" name="vnaam"><br/>
+    <input type="text" name="vnaam" required><br/>
     Achternaam
-    <input type="text" name="anaam"><br/>
+    <input type="text" name="anaam" required><br/>
     Geboortedatum
-    <input type="date" name="datum"><br/>
+    <input type="date" name="datum" required><br/>
     Email
-    <input type="text" name="email"><br/>
+    <input type="email" name="email" required><br/>
     Wachtwoord
-    <input type="password" name="pass"><br/>
+    <input type="password" name="pass" required><br/>
     Wachtwoord opnieuw invoeren
-    <input type="password" name="passconfirm"><br/>
+    <input type="password" name="passconfirm" required><br/>
     <button type="submit">registreer</button>
 </form>
 
@@ -27,24 +27,29 @@ if (isset($_POST["vnaam"])) {
     $pass = $_POST["pass"];
     $passconfirm = $_POST["passconfirm"];
 
-    $sql = "select * from `users` where `Email` like ".$email;
-    $result = $conn->query($sql);
-    while($row = $result->fetch_assoc()) {
-        $row["Email"];
+    $sql = "select * from `users` where `Email` like '".$email."'";
 
-    }
-    die();
-    if (0 == $result->num_rows) {
-        $sql = "INSERT INTO `users`(`VoorNaam`, `AchterNaam`, `Geboortedatum`, `Email`, `Wachtwoord`)
-    VALUES ('$first','$last','$birthdate','$email','$pass')";
-        if ($conn->query($sql) === TRUE) {
-            echo "New record created successfully";
-            echo "<script type='text/javascript'>location.href = 'index.php';</script>";
-        } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
-        }
-    } else {
+    $result = $conn->query($sql);
+    if (0 != $result->num_rows)
+    {
         echo "email is al in gebruik";
+    }
+    else
+    {
+        $hashed = password_hash($pass,PASSWORD_DEFAULT);
+        $sql = "INSERT INTO `users`(`VoorNaam`, `AchterNaam`, `Geboortedatum`, `Email`, `Wachtwoord`)
+        VALUES ('$first','$last','$birthdate','$email','$hashed')";
+        if ($pass == $passconfirm) {
+            if ($conn->query($sql) === TRUE) {
+                echo "New record created successfully";
+                echo "<script type='text/javascript'>location.href = 'index.php';</script>";
+            } else {
+                echo "Error: " . $sql . "<br>" . $conn->error;
+            }
+        }
+        else {
+            echo "wachtwoorden zijn niet hetzelfde";
+        }
     }
 }
 ?>
