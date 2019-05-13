@@ -27,18 +27,6 @@ while($row = $result->fetch_assoc()) {
         echo "<script type='text/javascript'>alert('fout e-mail/wachtwoord')</script>";
     }
 }
-die();
-$sql = "SELECT * FROM `users` WHERE `Email` like '$user' and `Wachtwoord` like '$hashed'";
-$result = $conn->query($sql);
-if (0 == $result->num_rows){
-    echo "<script type='text/javascript'>alert('fout e-mail/wachtwoord')</script>";
 }
-else{
-    session_start();
-    while ($row = $result->fetch_assoc()){
-        $_SESSION['uID'] = $row['ID'];
-    }
-    echo "<script type='text/javascript'>location.href = 'mainpage.php'</script>";
-}}
 
 ?>
