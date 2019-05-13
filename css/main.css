@@ -1,15 +1,33 @@
 body {
     background-color: gray;
 }
+
 #nav {
     background-color: white;
 }
+
 #nav li{
     display: inline;
     text-decoration: none;
     margin-left: 5%
 }
+
 #nav a{
     background-color: pink;
     padding: 2px
+}
+
+#page1 {
+    background-color: #1818f2;
+}
+
+#page2 {
+    background-color: #ffffff;
+}
+
+#page3 {
+    background-color: #1818f2;
+}
+#page4 {
+    background-color: #ffffff;
 }
