@@ -11,7 +11,6 @@ require "dbs/dbconnect.php";
 if (isset($_POST['user']) && isset($_POST['pas'])){
 $user = $_POST['user'];
 $pass = $_POST['pas'];
-//$hashed = password_hash($pass,PASSWORD_DEFAULT);
     $sql = "select * from `users` where `Email` like '$user'";
     $result = $conn->query($sql);
 while($row = $result->fetch_assoc()) {
