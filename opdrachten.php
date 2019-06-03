@@ -10,7 +10,7 @@ while ($row= $result->fetch_assoc()){
     echo  "<td>".$row["Bedrijfsnaam"]."</td>";
     echo  "<td>".$row["Opdrachtnaam"]."</td>";
     echo "<td>".$row["Opdrachtbeschrijving"]."</td>";
-    echo "<td><button type='submit' value='".$row["opdrachten.ID"]."'  name=''>kopen</button></td>";
+    echo "<td><button type='submit' value='".$row["ID"]."'  name='opID'>soliciteer</button></td>";
     echo "</tr>";
 }
 echo "</table></form>";
