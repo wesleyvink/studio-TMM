@@ -18,10 +18,9 @@ while($row = $result->fetch_assoc()) {
     if (password_verify($pass, $row['Wachtwoord'])) {
 
         session_start();
-        while ($row = $result->fetch_assoc()){
             $_SESSION['uID'] = $row['ID'];
-        }
-        echo "<script type='text/javascript'>location.href = 'mainpage.php'</script>";    }
+            echo "<script type='text/javascript'>location.href = 'opdrachten.php'</script>";
+    }
     else {
         echo "<script type='text/javascript'>alert('fout e-mail/wachtwoord')</script>";
     }

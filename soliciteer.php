@@ -1,7 +1,6 @@
 <?php
 session_start();
 require "dbs/dbconnect.php";
-$_SESSION['uID'] = 1;
 $user = $_SESSION['uID'];
 if (isset($_POST['opID'])){
     $opID = $_POST['opID'];
