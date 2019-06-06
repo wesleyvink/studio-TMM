@@ -1,33 +1,110 @@
 body {
-    background-color: gray;
-}
-
-#nav {
     background-color: white;
 }
 
-#nav li{
-    display: inline;
-    text-decoration: none;
-    margin-left: 5%
-}
-
-#nav a{
-    background-color: pink;
-    padding: 2px
-}
 
 #page1 {
-    background-color: #1818f2;
+    background-color: rgb(255, 0, 152);
 }
 
 #page2 {
-    background-color: #ffffff;
+    background-color: rgb(255, 255, 255);
 }
 
 #page3 {
-    background-color: #1818f2;
+    background-color: rgb(255, 0, 152);
 }
+
 #page4 {
-    background-color: #ffffff;
+    background-color: rgb(255, 255, 255);
+}
+
+/* Navigation */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: red;
+    background: rgba(255, 0, 152, 0.5)
+}
+
+li {
+    display: inline;
+    text-decoration: none;
+    margin-left: 5%;
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: mediumvioletred;
+}
+div p {
+    margin: 5%;
+    font-weight: bold;
+    color: white;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    text-align: center;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+}
+nav.hidden {
+    transform: translate3d(0,-100%,0);
+}
+nav ul li {
+    display: inline-block;
+    margin-right: 60px;
+}
+nav ul li:last-child {
+    margin-right: 0;
+}
+nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+
+/*	MAIN HEADING
+------------------------------*/
+
+.main-heading
+{
+    background: url(../afb/main.jpg) center center no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    color: #cfcfcf;
+}
+
+.main-heading >.overlay
+{
+    height: 750px;
+}
+p.lead
+{
+    position:relative;
+    top:5px;
+    color:#e3e3e3;
+    font-size:0.93em;
+
 }

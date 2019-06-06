@@ -23,19 +23,33 @@ $('.smooth').on('click', function() {
 });
 </script>
 <div id="nav">
-  <span id="struc">
-  <img src="afb\SUMMA_ECHT2473_Summa_Fashion_sticker_40x30mm-HR.png" height="100" />
-     <ul>
-         <li><a href="#home">home</a></li>
-         <li><a href="#opdrachten">opdrachten</a></li>
-         <li><a href="#agenda">agenda</a></li>
-         <li><a href="#archief">archief</a></li>
-         <li><a href="index.php">log uit</a></li>
-     </ul>
-</span>
+
+  <!-- [/Nav]
+ ==========================================-->
+  <?php
+  include 'navigation.php'
+  ?>
+
+  <!-- [/NAV]
+============================================================================================================================-->
+
+  <!-- [/MAIN-HEADING]
+============================================================================================================================-->
+  <section class="main-heading" id="home">
+    <div class="overlay">
+      <div class="container">
+        <div class="row">
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!-- [/MAIN-HEADING]
+  ============================================================================================================================-->
+
 </div>
 <div id="page1">
-  <a id="home" class="smooth"></a>
+  <a id="howme" class="smooth"></a>
     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
     Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
     Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
@@ -87,6 +101,7 @@ $('.smooth').on('click', function() {
     Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.
     Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo.
     Curabitur a felis in nunc fringilla tristique. Morbi mattis ullamcorper velit. Phasellus gravida semper nisi. Nullam vel sem.
+
   </div>
 <div id="page4">
   <a id="archief" class="smooth"></a>
