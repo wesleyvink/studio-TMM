@@ -59,8 +59,7 @@ $('.smooth').on('click', function() {
   <a id="opdrachten" class="smooth"></a>
     <?php include "projecten.php";?>
     lorem ipsum
-  <div class="button_cont" align="center"><a class="example_a" rel="nofollow noopener">Soliciteer</a></div>
-</div>
+
 <div id="page3">
   <a id="agenda" class="smooth"></a>
     <?php include "archief.php"?>
