@@ -16,10 +16,6 @@
     <input type="password" name="passconfirm" required><br/>
     <button type="submit">registreer</button>
 </form>
-
-<h2>
-    heeft u al een account log <a href="index.php">hier</a> in
-</h2>
 <?php
 if (isset($_POST["vnaam"])) {
     $first = $_POST["vnaam"];

@@ -6,15 +6,16 @@ if (isset($_POST['opID2'])){
     $_SESSION['opID2'] = $opID;
 }
 else{
-   // $opID = $_SESSION['opID2'];
+   $opID = $_SESSION['opID2'];
 }
 $opID = 1;
 ?>
 <html>
-<form action="foto%20toevoegen.php" method="post">
+<form action="foto%20toevoegen.php" method="post" enctype="multipart/form-data">
 <input type="file" name="opdrachtafb">
 <input type="submit" name="submit">
 </form>
+<a href="mainpage.php"><button>home</button></a>
 </html>
 
 <?php
@@ -40,7 +41,7 @@ if(isset($_POST['submit'])) {
         */
         if ($result) {
             echo "Your file <html><b><i>" . $fileName . "</i></b></html> has been successfully uploaded";
-            $query = "INSERT INTO `foto`(`OpdrachtID`, `foto`, `fotoloc`) VALUES (`$opID`,`$fileName`,`$fileTarget`))";
+            $query = "INSERT INTO `foto`(`OpdrachtID`, `foto`, `fotoloc`) VALUES ('$opID','$fileName','$fileTarget')";
             $conn->query($query) or die("Error : " . mysqli_error($conn));
         } else {
             echo "Sorry !!! There was an error in uploading your file";

@@ -9,9 +9,13 @@ while ($row= $result->fetch_assoc()){
     echo "<tr>";
     echo  "<td>".$row["Bedrijfsnaam"]."</td>";
     echo  "<td>".$row["Opdrachtnaam"]."</td>";
-    echo "<td>".$row["Opdrachtbeschrijving"]."</td>";
+    echo "<td><a onclick='alert('".$row["Opdrachtbeschrijving"]."')'>meerinfo</a></td>";
     echo "<td><button type='submit' value='".$row["ID"]."'  name='opID'>soliciteer</button></td>";
     echo "</tr>";
+    echo "<script> function meerinfo() {
+    alert('".$row["Opdrachtbeschrijving"]."')
+
+}</script>";
 }
 echo "</table></form>";
 ?>
