@@ -11,7 +11,7 @@ else{
 $opID = 1;
 ?>
 <html>
-<form action="foto%20toevoegen.php">
+<form action="foto%20toevoegen.php" method="post">
 <input type="file" name="opdrachtafb">
 <input type="submit" name="submit">
 </form>

@@ -19,7 +19,7 @@ while($row = $result->fetch_assoc()) {
 
         session_start();
             $_SESSION['uID'] = $row['ID'];
-            echo "<script type='text/javascript'>location.href = 'opdrachten.php'</script>";
+            echo "<script type='text/javascript'>location.href = 'mainpage.php'</script>";
     }
     else {
         echo "<script type='text/javascript'>alert('fout e-mail/wachtwoord')</script>";
