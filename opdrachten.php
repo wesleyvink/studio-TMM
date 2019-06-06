@@ -10,8 +10,8 @@ while ($row= $result->fetch_assoc()){
     echo  "<td>".$row["Bedrijfsnaam"]."</td>";
     echo  "<td>".$row["Opdrachtnaam"]."</td>";
     echo "<td><a onclick='alert('".$row["Opdrachtbeschrijving"]."')'>meerinfo</a></td>";
-    echo "<td>  <div class=\"button_cont\" align=\"center\"><a class=\"example_a\" rel=\"nofollow noopener\">Soliciteer</a></div>
-</div><button type='submit' value='".$row["ID"]."'  name='opID'>soliciteer</button></td>";
+    echo "<td>  <div class=\"button_cont\" align=\"center\"><button type='submit' value='".$row["ID"]."'  name='opID' class=\"example_a\" rel=\"nofollow noopener\">Soliciteer</button></div>
+</div></td>";
 
     echo "</tr>";
     echo "<script> function meerinfo() {
