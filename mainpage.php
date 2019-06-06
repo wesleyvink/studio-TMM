@@ -47,15 +47,19 @@ $('.smooth').on('click', function() {
   <!-- [/MAIN-HEADING]
   ============================================================================================================================-->
 
+  <!-- [/MAIN-PAGE]
+ ============================================================================================================================-->
+
 </div>
 <div id="page1">
-  <a id="howme" class="smooth"></a>
+  <a id="home" class="smooth"></a>
     <?php include "opdrachten.php";?>
 </div>
 <div id="page2">
   <a id="opdrachten" class="smooth"></a>
     <?php include "projecten.php";?>
     lorem ipsum
+  <div class="button_cont" align="center"><a class="example_a" rel="nofollow noopener">Soliciteer</a></div>
 </div>
 <div id="page3">
   <a id="agenda" class="smooth"></a>
@@ -68,3 +72,6 @@ $('.smooth').on('click', function() {
   </div>
 </body>
 </html>
+
+<!-- [/MAIN-PAGE]
+============================================================================================================================-->
