@@ -113,7 +113,7 @@ p.lead
     color: #fff !important;
     text-transform: uppercase;
     background: indigo;
-    padding: 20px;
+    padding: 10px;
     border-radius: 5px;
     display: inline-block;
     border: none;
@@ -121,9 +121,18 @@ p.lead
 
 .example_a:hover {
     background: rebeccapurple;
+}
+
+/*.example_a:hover {
+    background: rebeccapurple;
     letter-spacing: 1px;
     -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
     -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
     box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
     transition: all 0.4s ease 0s;
+}*/
+.container-fluid{
+    padding-right: 0 !important;
+
+    padding-left: 0px !important;
 }
