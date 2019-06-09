@@ -84,7 +84,9 @@ nav ul li a {
     font-family: Arial, sans-serif;
 }
 
-
+th {
+    padding-right: 20px;
+}
 /*	MAIN HEADING
 ------------------------------*/
 

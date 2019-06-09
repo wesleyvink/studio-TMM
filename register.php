@@ -1,5 +1,5 @@
 <?php require "dbs/dbconnect.php"; ?>
-<form action="register.php" method="post">
+<form action="mainpage.php" method="POST">
     Voornaam<br/>
     <input type="text" name="vnaam" required><br/>
     Achternaam<br/>
@@ -8,8 +8,8 @@
     <input type="date" name="datum" required><br/>
     Email<br/>
     <input type="email" name="email" required><br/>
-    BedrijfsID<br/>
-    <input type="number" name="bedrijf" placeholder="0" ><br/>
+    bedrijfs naam<br/>
+    <input type="text" name="bedrijf" value="student" required><br/>
     Wachtwoord<br/>
     <input type="password" name="pass" required><br/>
     Wachtwoord opnieuw invoeren<br/>
@@ -35,41 +35,23 @@ if (isset($_POST["vnaam"])) {
     else
     {
         $hashed = password_hash($pass,PASSWORD_DEFAULT);
+        if ($pass == $passconfirm) {
 
-        if (0 != $_POST["bedrijf"]){
             $bedrijf=$_POST["bedrijf"];
-            $sql = "select * from `bedrijven` where `ID` like '".$bedrijf."'";
 
             $result = $conn->query($sql);
-            if (0 != $result->num_rows)
-            {
-                $sql = "INSERT INTO `users`(`VoorNaam`, `AchterNaam`, `Geboortedatum`, `Email`, `Wachtwoord`, `BedrijfsID`)
+                $sql = "INSERT INTO `users`(`VoorNaam`, `AchterNaam`, `Geboortedatum`, `Email`, `Wachtwoord`, `Bedrijfsnaam`)
                 VALUES ('$first','$last','$birthdate','$email','$hashed','$bedrijf')";
                 if ($pass == $passconfirm) {
                     if ($conn->query($sql) === TRUE) {
-                        echo "<script type='text/javascript'>location.href = 'index.php';</script>";
+                        echo "account succesvol aangemaakt";
                     } else {
                         echo "Error: " . $sql . "<br>" . $conn->error;
                     }
                     die();
 
                 }
-            }
-            else{
-                echo "bedrijf bestaat niet";
-                die();
-            }
-        }
-        else {
-            $sql = "INSERT INTO `users`(`VoorNaam`, `AchterNaam`, `Geboortedatum`, `Email`, `Wachtwoord`)
-        VALUES ('$first','$last','$birthdate','$email','$hashed')";
-        }
-        if ($pass == $passconfirm) {
-            if ($conn->query($sql) === TRUE) {
-                echo "<script type='text/javascript'>location.href = 'index.php';</script>";
-            } else {
-                echo "Error: " . $sql . "<br>" . $conn->error;
-            }
+
         }
         else {
             echo "wachtwoorden zijn niet hetzelfde";

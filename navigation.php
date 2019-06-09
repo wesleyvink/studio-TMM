@@ -1,9 +1,26 @@
+<?php
+$sql = "select Bedrijfsnaam from users where  id =".$_SESSION["uID"];
+$result = $conn->query($sql);
+?>
 <nav>
     <ul>
         <li><a href="#home">home</a></li>
         <li><a href="#opdrachten">opdrachten</a></li>
-        <li><a href="#agenda">agenda</a></li>
-        <li><a href="#archief">archief</a></li>
+        <li><a href="#uw projecten">uw projecten</a></li>
+        <li><a href='#archief'>archief</a></li>
+        <?php
+        while ($row = $result->fetch_assoc()) {
+
+            if ($row['Bedrijfsnaam'] == "docent" || $row['Bedrijfsnaam'] != "student") {
+                echo "<li><a href='#secret'>";
+                if ($row['Bedrijfsnaam'] == "docent") {
+                    echo "nieuw account";
+                } else {
+                    echo "nieuwe opdracht";
+                }
+                echo "</a></li>";
+            }
+        }?>
     </ul>
 </nav>
 

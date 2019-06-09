@@ -21,3 +21,4 @@ while ($row= $result->fetch_assoc()){
     echo "</tr>";
 }
 echo "</table></form>";
+?>

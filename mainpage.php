@@ -1,4 +1,7 @@
-<?php session_start() ?>
+<?php
+session_start();
+require "dbs/dbconnect.php"
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,6 +19,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="jquery-3.4.0.min.js"></script>
 <script>
 $('.smooth').on('click', function() {
     $.smoothScroll({
@@ -40,7 +44,9 @@ $('.smooth').on('click', function() {
   <!-- [/MAIN-HEADING]
 ============================================================================================================================-->
   <section class="main-heading" id="home">
-    <div class="overlay">
+      <a id="home" class="smooth"></a>
+
+      <div class="overlay">
       <div class="container">
         <div class="row">
         </div>
@@ -57,20 +63,31 @@ $('.smooth').on('click', function() {
 </div>
 <div class="container-fluid">
 <div id="page1">
-  <a id="home" class="smooth"></a>
+  <a id="opdrachten" class="smooth"></a>
     <?php include "opdrachten.php";?>
 </div>
 <div id="page2">
-  <a id="opdrachten" class="smooth"></a>
+  <a id="uw projecten" class="smooth"></a>
     <?php include "projecten.php";?>
 <div id="page3">
-  <a id="agenda" class="smooth"></a>
-    <?php include "archief.php"?>
+  <a id="archief" class="smooth"></a>
+    <?php include "archief.php";?>
 
   </div>
 <div id="page4">
-  <a id="archief" class="smooth"></a>
-    <?php include "register.php"?>
+  <a id="secret" class="smooth"></a>
+    <?php
+    $sql = "select Bedrijfsnaam from users where  id =".$_SESSION["uID"];
+    $result = $conn->query($sql);
+    while ($row = $result->fetch_assoc()) {
+        if ($row['Bedrijfsnaam'] == "docent") {
+            include "register.php";
+        }
+        else if ( $row['Bedrijfsnaam'] != "student"){
+
+        }
+    }
+    ?>
   </div>
 </div>
 </body>
