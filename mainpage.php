@@ -64,11 +64,33 @@ $('.smooth').on('click', function() {
 <div class="container-fluid">
 <div id="page1">
   <a id="opdrachten" class="smooth"></a>
-    <?php include "opdrachten.php";?>
+    <?php
+    $sql = "select Bedrijfsnaam from users where  id =".$_SESSION["uID"];
+    $result = $conn->query($sql);
+    while ($row = $result->fetch_assoc()) {
+        if ( $row['Bedrijfsnaam'] != "student"){
+            include "solicitanten.php";
+        }
+        else {
+            include "opdrachten.php";
+        }
+    }
+    ?>
 </div>
 <div id="page2">
   <a id="uw projecten" class="smooth"></a>
-    <?php include "projecten.php";?>
+    <?php
+    $sql = "select Bedrijfsnaam from users where  id =".$_SESSION["uID"];
+    $result = $conn->query($sql);
+    while ($row = $result->fetch_assoc()) {
+        if ( $row['Bedrijfsnaam'] != "student"){
+            include "uwopdrachten.php";
+        }
+        else{
+            include "projecten.php";
+        }
+    }
+   ?>
 <div id="page3">
   <a id="archief" class="smooth"></a>
     <?php include "archief.php";?>
@@ -84,7 +106,7 @@ $('.smooth').on('click', function() {
             include "register.php";
         }
         else if ( $row['Bedrijfsnaam'] != "student"){
-
+            include "opdrachten toevoegen.php";
         }
     }
     ?>

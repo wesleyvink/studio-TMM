@@ -1,8 +1,8 @@
 <?php
 require "dbs/dbconnect.php";
-$sql = "SELECT  opdrachten.ID, Bedrijfsnaam,Opdrachtnaam,Opdrachtbeschrijving FROM `opdrachten` INNER JOIN `bedrijven` on `bedrijven`.`ID` = `opdrachten`.`BedrijfsID` WHERE afgerond LIKE 1 ";
+$sql = "SELECT  opdrachten.ID, Bedrijfsnaam,Opdrachtnaam,Opdrachtbeschrijving FROM `opdrachten` WHERE afgerond LIKE 1 ";
 $result = $conn->query($sql);
-echo "<form action='fotos.php' method='get'>";
+echo "<form action='fotos.php' method='post'>";
 echo "<table>";
 echo "<tr><th>bedrijfsnaam</th><th>opdrachtnaam</th><th>opdrachtbeschijving</th></tr>";
 while ($row= $result->fetch_assoc()){

@@ -1,6 +1,6 @@
 <?php
 require "dbs/dbconnect.php";
-$sql = "SELECT opdrachten.ID, Bedrijfsnaam,Opdrachtnaam,Opdrachtbeschrijving FROM `opdrachten` INNER JOIN `bedrijven` on `bedrijven`.`ID` = `opdrachten`.`BedrijfsID` INNER JOIN `deelnemers` on `deelnemers`.`OpdrachtID` = `opdrachten`.`ID` WHERE afgerond LIKE 0 and `deelnemers`.`UserID` like ".$_SESSION['uID']." AND `deelnemers`.`aangenomen` like 0";
+$sql = "SELECT opdrachten.ID, Bedrijfsnaam,Opdrachtnaam,Opdrachtbeschrijving FROM `opdrachten` INNER JOIN `deelnemers` on `deelnemers`.`OpdrachtID` = `opdrachten`.`ID` WHERE afgerond LIKE 0 and `deelnemers`.`UserID` != ".$_SESSION['uID'];
 $result = $conn->query($sql);
 echo "<form action='soliciteer.php' method='post'>";
 echo "<table>";
