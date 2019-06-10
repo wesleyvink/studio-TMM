@@ -19,7 +19,7 @@ if(isset($_POST['submit'])) {
 // location.href = 'mainpage.php';
     $fileExistsFlag = 0;
     $fileName = $_FILES['cv']['name'];
-    $query = "SELECT cv FROM deelnemers WHERE cv='$fileName'";
+    $query = "SELECT cv FROM deelnemers WHERE cv='$fileName' and  UserID NOT like ".$_SESSION["uID"];
     $result = $conn->query($query) or die("Error : " . mysqli_error($conn));
     while ($row = mysqli_fetch_array($result)) {
         if ($row['filename'] == $fileName) {
@@ -37,15 +37,16 @@ if(isset($_POST['submit'])) {
         *	If file was successfully uploaded in the destination folder
         */
         if ($result) {
-            echo "Your file <html><b><i>" . $fileName . "</i></b></html> has been successfully uploaded";
             $query = "INSERT INTO `deelnemers`(`UserID`, `OpdrachtID`,`cv`, `cvloc`, `motievatie`) VALUES ('$user','$opID','$fileName','$fileTarget','$motievatie')";
             $conn->query($query) or die("Error : " . mysqli_error($conn));
+            echo "<script type='text/javascript'>location.href = 'mainpage.php'</script>";
+
         } else {
             echo "Sorry !!! There was an error in uploading your file";
         }
         mysqli_close($conn);
     } else {
-        echo "File <html><b><i>" . $fileName . "</i></b></html> already exists in your folder. Please rename the file and try again.";
+        echo "Bestand <html><b><i>" . $fileName . "</i></b></html> bestaat al. Geef het een andere naam en probeer opnieuw.";
         mysqli_close($conn);
     }
 }
