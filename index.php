@@ -1,11 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+</head>
+<div class="background-image"></div>
+    <div class="middle">
 <form action="index.php" method="post">
     email <input type="text" name="user" required/> <br/>
     wachtwoord <input type="password" name="pas" required/><br/>
-    <button type="submit">login</button>
+    <button class="example_a" type="submit">login</button>
 </form>
-<h2>
-    heeft u nog geen account registeer <a href="register.php">hier</a>
-</h2>
+    <a class="example_a" href="register.php">Registreren</a>
+        </div>
 <?php
 require "dbs/dbconnect.php";
 if (isset($_POST['user']) && isset($_POST['pas'])){
@@ -29,3 +39,4 @@ while($row = $result->fetch_assoc()) {
 }
 
 ?>
+</html>
