@@ -10,6 +10,7 @@
 <div class="background-image"></div>
     <div class="middle">
 <form action="index.php" method="post">
+    <div class="loginTable">
     <table>
         <tr><td>
         <div class="tbUser">
@@ -28,6 +29,7 @@
             </td>
         </tr>
     </table>
+        </div>
 </form>
         </div>
 <?php

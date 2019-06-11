@@ -2,18 +2,22 @@
 ------------------------------*/
 #page1 {
     background-color: rgb(255, 0, 152);
+    height: 500px;
 }
 
 #page2 {
     background-color: rgb(255, 255, 255);
+    height: 500px;
 }
 
 #page3 {
     background-color: rgb(255, 0, 152);
+    height: 500px;
 }
 
 #page4 {
     background-color: rgb(255, 255, 255);
+    height: 500px;
 }
 
 input[type=text] {
@@ -84,8 +88,8 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: red;
-    background: rgba(255, 0, 152, 0.5)
+    background-color: purple;
+    background: rgba(75, 0, 130, 0.5)
 }
 
 li {
@@ -104,7 +108,9 @@ li a {
 }
 
 li a:hover {
-    background-color: mediumvioletred;
+    background-color: mediumpurple;
+    text-decoration: none;
+    color: white;
 }
 div p {
     margin: 5%;
@@ -219,23 +225,11 @@ body {
 .background-image {
     filter: blur(5px);
 }
-/*
-.tbUser {
-    position: absolute;
-    margin-left: 10%;
-    margin-top: 30%;
-}
 
-.tbPassword {
-    position: absolute;
-    margin-left: 50%;
-    margin-top: -6.2%;
+div.loginTable {
+    margin-top: 200px;
+    margin-left: 30px;
 }
-
-.btnLogin {
-    position: absolute;
-    margin-left: 10%;
-}*/
 
 /*	Picture Page
 ------------------------------*/

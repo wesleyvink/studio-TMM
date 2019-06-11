@@ -1,6 +1,8 @@
+
 <?php
 session_start();
 require "dbs/dbconnect.php";
+$opID = 1;
 $user = $_SESSION['uID'];
 if (isset($_POST['opID'])){
     $opID = $_POST['opID'];
@@ -11,14 +13,24 @@ else{
 }
 
 ?>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+</head>
+    <div class="Picture">
 <form action='soliciteer.php' method='post' enctype="multipart/form-data">
     <table>
         <tr><td>cv</td><td>
                 <input type='file' name='cv' /></td> </tr><tr><td>motivatie</td><td>
                 <input type='text' name='motievatie'/></td></tr>
-        <tr><td></td><td> <input name="submit" type='submit'/></td></tr>
+        <tr><td></td><td> <input class="example_a" name="submit" type='submit'/></td></tr>
     </table>
 </form>
+</div>
 <?php
 if(isset($_POST['submit'])) {
 // location.href = 'mainpage.php';
@@ -56,3 +68,4 @@ if(isset($_POST['submit'])) {
     }
 }
 ?>
+</html>
