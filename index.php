@@ -10,15 +10,24 @@
 <div class="background-image"></div>
     <div class="middle">
 <form action="index.php" method="post">
+    <table>
+        <tr><td>
         <div class="tbUser">
     email: <input type="text" name="user" required/> <br/>
         </div>
+            </td>
+            <td>
         <div class="tbPassword">
     wachtwoord: <input type="password" name="pas" required/><br/>
         </div>
+            </td>
+            <td>
         <div class="btnLogin">
     <button class="example_a" type="submit">login</button>
         </div>
+            </td>
+        </tr>
+    </table>
 </form>
         </div>
 <?php
