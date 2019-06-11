@@ -1,5 +1,5 @@
 <?php
-$sql = "SELECT opdrachten.ID, Bedrijfsnaam,Opdrachtnaam,Opdrachtbeschrijving FROM `opdrachten` INNER JOIN `deelnemers` on `deelnemers`.`OpdrachtID` = `opdrachten`.`ID` WHERE afgerond LIKE 0 AND `deelnemers`.`UserID` = ".$_SESSION["uID"]." AND `aangenomen` = 1";
+$sql = "SELECT opdrachten.ID, Bedrijfsnaam,Opdrachtnaam,Opdrachtbeschrijving FROM `opdrachten` WHERE `Bedrijfsnaam` like 'echtbedrijf'";
 $result = $conn->query($sql);
 echo "<form action='foto%20toevoegen.php' method='post'>";
 echo "<table>";
@@ -17,4 +17,5 @@ while ($row= $result->fetch_assoc()){
     alert('".$row["Opdrachtbeschrijving"]."')
 }</script>";
 }
+echo "</table></form>"
 ?>

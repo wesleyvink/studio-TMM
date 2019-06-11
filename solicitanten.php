@@ -3,7 +3,7 @@ if (isset($_POST["aan"])){
 
     $sql = "UPDATE `deelnemers` SET`aangenomen`= 1 WHERE `ID` LIKE ".$_POST["aan"];
     $conn->query($sql)  or die("Error : " . mysqli_error($conn));
-    echo "solicitant aangenomen";
+    echo "<script type='text/javascript' >alert('solicitant aangenomen')</script>";
 }
 elseif (isset($_POST["afw"])){
     $sql = "DELETE FROM `deelnemers` WHERE id like ".$_POST["afw"];
@@ -15,12 +15,13 @@ $result = $conn->query($sql);
 try {
     echo "<form action='mainpage.php' method='post'>";
     echo "<table>";
-    echo "<tr><th>naam solicitant</th><th>opdrachtnaam</th><th>motievatie</th><th>opdrachtbeschijving</th></tr>";
+    echo "<tr><th>naam solicitant</th><th>opdrachtnaam</th><th>cv</th><th>motivatie</th><th>opdrachtbeschijving</th></tr>";
     while ($row = $result->fetch_assoc()){
         echo "<tr>";
         echo  "<td>".$row["voornaam"]." ".$row["achternaam"]."</td>";
         echo  "<td>".$row["opdrachtnaam"]."</td>";
-        echo "<td><div class=\"button_cont\" align=\"center\"><button class=\"example_a\" rel=\"nofollow noopener\" type='button' onclick='mot".$row["ID"]."()'>motievatie</button></td>";
+        echo  "<td><a href='".$row["cvloc"]."' ><div class=\"button_cont\" align=\"center\"><button class=\"example_a\" rel=\"nofollow noopener\" type='button' >CV</button></a></td>";
+        echo "<td><div class=\"button_cont\" align=\"center\"><button class=\"example_a\" rel=\"nofollow noopener\" type='button' onclick='mot".$row["ID"]."()'>motivatie</button></td>";
         echo "<td><div class=\"button_cont\" align=\"center\"><button class=\"example_a\" rel=\"nofollow noopener\" type='button' onclick='fer".$row["ID"]."()'>meerinfo</button></td>";
         echo "<td>  <div class=\"button_cont\" align=\"center\"><button type='submit' value='".$row["ID"]."'  name='aan' class=\"example_a\" rel=\"nofollow noopener\">aannemen</button></div>
 </div></td>";
@@ -36,6 +37,7 @@ try {
     alert('".$row["motievatie"]."')
 }</script>";
     }
+    echo "</table></form>";
 }
 catch (Exception $exception){
     echo "er zijn nog geen solicitanten";

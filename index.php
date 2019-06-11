@@ -14,7 +14,6 @@
     wachtwoord <input type="password" name="pas" required/><br/>
     <button class="example_a" type="submit">login</button>
 </form>
-    <a class="example_a" href="register.php">Registreren</a>
         </div>
 <?php
 require "dbs/dbconnect.php";

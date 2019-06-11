@@ -12,7 +12,12 @@ else{
 
 ?>
 <form action='soliciteer.php' method='post' enctype="multipart/form-data">
-<input type='file' name='cv' /> <input type='text' name='motievatie'/> <input name="submit" type='submit'/>
+    <table>
+        <tr><td>cv</td><td>
+                <input type='file' name='cv' /></td> </tr><tr><td>motivatie</td><td>
+                <input type='text' name='motievatie'/></td></tr>
+        <tr><td></td><td> <input name="submit" type='submit'/></td></tr>
+    </table>
 </form>
 <?php
 if(isset($_POST['submit'])) {
