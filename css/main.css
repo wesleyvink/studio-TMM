@@ -221,16 +221,19 @@ body {
 }
 
 .tbUser {
+    position: absolute;
     margin-left: 10%;
     margin-top: 30%;
 }
 
 .tbPassword {
+    position: absolute;
     margin-left: 50%;
     margin-top: -6.2%;
 }
 
 .btnLogin {
+    position: absolute;
     margin-left: 10%;
 }
 
