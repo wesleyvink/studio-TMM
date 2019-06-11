@@ -1,3 +1,5 @@
+/*	SITE WIDE
+------------------------------*/
 #page1 {
     background-color: rgb(255, 0, 152);
 }
@@ -14,7 +16,69 @@
     background-color: rgb(255, 255, 255);
 }
 
-/* Navigation */
+input[type=text] {
+    width: 20%;
+    padding: 4px 4px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+input[type=date] {
+    width: 20%;
+    padding: 4px 4px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+input[type=email] {
+    width: 20%;
+    padding: 4px 4px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+input[type=password] {
+    width: 20%;
+    padding: 4px 4px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+input[type=text]:focus {
+    border: 3px solid #4b0082;
+}
+
+input[type=date]:focus {
+    border: 3px solid #4b0082;
+}
+
+input[type=email]:focus {
+    border: 3px solid #4b0082;
+}
+
+input[type=password]:focus {
+    border: 3px solid #4b0082;
+}
+
+/*	NAVIGATION
+------------------------------*/
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -140,8 +204,8 @@ p.lead
 div.middle {
     border: 1px solid black;
     margin-top: 5%;
-    margin-right: 20%;
-    margin-left: 20%;
+    margin-right: 30%;
+    margin-left: 30%;
     height: 500px;
     background: rgba(255, 0, 152, 0.5);
     filter: alpha(opacity=60);
@@ -155,3 +219,64 @@ body {
 .background-image {
     filter: blur(5px);
 }
+
+.tbUser {
+    margin-left: 10%;
+    margin-top: 30%;
+}
+
+.tbPassword {
+    margin-left: 50%;
+    margin-top: -6.2%;
+}
+
+.btnLogin {
+    margin-left: 10%;
+}
+
+/*	Picture Page
+------------------------------*/
+
+div.Picture {
+    border: 1px solid black;
+    margin-top: 5%;
+    margin-right: 25%;
+    margin-left: 25%;
+    height: 500px;
+    background: rgba(255, 0, 152, 0.5);
+    filter: alpha(opacity=60);
+    border-radius: 20px;
+}
+
+.pictureupload {
+    margin-left: 10%;
+    margin-top: 15%;
+}
+
+.picturedescription {
+    margin-left: 50%;
+    margin-top: -3.8%;
+}
+
+.btnPictureSend {
+    margin-left: 10%;
+}
+
+.btnPictureHome {
+    margin-left: 50%;
+    margin-top: -3.8%;
+}
+
+/*	Register Page
+------------------------------*/
+div.RegisterDiv {
+    border: 1px solid black;
+    margin-top: 5%;
+    margin-right: 25%;
+    margin-left: 25%;
+    height: 500px;
+    background: rgba(255, 0, 152, 0.5);
+    filter: alpha(opacity=60);
+    border-radius: 10px;
+}
+

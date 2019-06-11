@@ -14,7 +14,7 @@
     <input type="password" name="pass" required><br/>
     Wachtwoord opnieuw invoeren<br/>
     <input type="password" name="passconfirm" required><br/>
-    <button type="submit">registreer</button>
+    <button type="submit" class="example_a">registreer</button>
 </form>
 <?php
 if (isset($_POST["vnaam"])) {

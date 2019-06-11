@@ -10,13 +10,28 @@ else{
 }
 ?>
 <html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+</head>
+<div class="Picture">
 <form action="foto%20toevoegen.php" method="post" enctype="multipart/form-data">
-<input type="file" name="opdrachtafb" required><br/>
-    omschrijving van de foto
-    <input type='text' name='omschrijving' required/><br/>
-<input type="submit" name="submit">
+    <div class="PictureUpload">
+        <input type="file" name="opdrachtafb" required><br/>
+    </div>
+    <div class="PictureDescription">
+        omschrijving van de foto
+        <input type='text' name='omschrijving' required/><br/>
+    </div>
+    <div class="btnPictureSend">
+        <input class="example_a" type="submit" name="submit">
+    </div>
 </form>
-<a href="mainpage.php"><button>home</button></a>
+<a href="mainpage.php"><button class="example_a btnPictureHome">home</button></a>
+    </div>
 </html>
 
 <?php

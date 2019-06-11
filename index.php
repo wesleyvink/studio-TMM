@@ -10,9 +10,15 @@
 <div class="background-image"></div>
     <div class="middle">
 <form action="index.php" method="post">
-    email <input type="text" name="user" required/> <br/>
-    wachtwoord <input type="password" name="pas" required/><br/>
+        <div class="tbUser">
+    email: <input type="text" name="user" required/> <br/>
+        </div>
+        <div class="tbPassword">
+    wachtwoord: <input type="password" name="pas" required/><br/>
+        </div>
+        <div class="btnLogin">
     <button class="example_a" type="submit">login</button>
+        </div>
 </form>
         </div>
 <?php
