@@ -21,7 +21,8 @@ $result = $conn->query($sql);
                 echo "</a></li>";
             }
         }?>
-    </ul>
+        <li><a href="index.php">loguit </a></li>
+     </ul>
 </nav>
 
 <div class="content"></div>

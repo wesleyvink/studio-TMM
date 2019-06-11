@@ -68,7 +68,7 @@ $('.smooth').on('click', function() {
     $sql = "select Bedrijfsnaam from users where  id =".$_SESSION["uID"];
     $result = $conn->query($sql);
     while ($row = $result->fetch_assoc()) {
-        if ( $row['Bedrijfsnaam'] != "student"){
+        if ( $row['Bedrijfsnaam'] != "student" && $row["Bedrijfsnaam"] != "docent"){
             include "solicitanten.php";
         }
         else {

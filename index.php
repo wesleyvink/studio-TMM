@@ -1,3 +1,7 @@
+<?php
+session_start();
+session_destroy();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +18,7 @@
     <table>
         <tr><td>
         <div class="tbUser">
-    email: <input type="text" name="user" required/> <br/>
+    email: <input type="email" name="user" required/> <br/>
         </div>
             </td>
             <td>
