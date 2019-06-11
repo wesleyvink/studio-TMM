@@ -1,5 +1,5 @@
 <?php
-$sql = "SELECT opdrachten.ID, Bedrijfsnaam,Opdrachtnaam,Opdrachtbeschrijving FROM `opdrachten` WHERE `Bedrijfsnaam` like 'echtbedrijf'";
+$sql = "SELECT opdrachten.ID, Bedrijfsnaam,Opdrachtnaam,Opdrachtbeschrijving FROM `opdrachten` WHERE `Bedrijfsnaam` like 'echtbedrijf' and `afgerond` like 0";
 $result = $conn->query($sql);
 echo "<form action='foto%20toevoegen.php' method='post'>";
 echo "<table>";
