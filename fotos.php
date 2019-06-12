@@ -17,15 +17,13 @@ else{
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
     </head>
-    <div class="Picture" style="
-    overflow-y: scroll;    height: 80% !important; width: 90%;     margin-left: 5%!important;
-">
+    <div class="Picture" style="overflow-y: scroll;    height: 80% !important; width: 90%;     margin-left: 5%!important;">
     <h1 style="margin-left: 30px; margin-top: 30px">fotos van het project</h1>
 <?php
 $sql  = "SELECT * FROM `foto` WHERE omschrijving is not null and omschrijving not like '0' and OpdrachtID = ".$opID;
 $result = $conn->query($sql);
 echo "<table width='60%' style='margin: 30px'>";
-echo "<tr><th><h1>omschrijving</h1></th><th style=' float: left; margin-left: 10%'><h1>`foto</h1></th></tr>";
+echo "<tr><th><h1>omschrijving</h1></th><th style=' float: left; margin-left: 10%'><h1>foto</h1></th></tr>";
 while ($row= $result->fetch_assoc()){
     echo "<tr>";
     echo  "<td><h2>".$row["omschrijving"]."</h2></td>";
