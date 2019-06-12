@@ -1,21 +1,28 @@
 /*	Main Page
 ------------------------------*/
 #page1 {
+    overflow: hidden;
     background-color: rgb(255, 0, 152);
     height: 500px;
 }
 
 #page2 {
+    overflow: hidden;
+
     background-color: rgb(255, 255, 255);
     height: 500px;
 }
 
 #page3 {
+    overflow: hidden;
+
     background-color: rgb(255, 0, 152);
     height: 500px;
 }
 
 #page4 {
+    overflow: hidden;
+
     background-color: rgb(255, 255, 255);
     height: 500px;
 }

@@ -1,8 +1,14 @@
+<div class="page4banner">
+    <h1>voeg hier een nieuwe opdracht toe <i class="down"></i></h1>
+</div>
+<img src="afb/tape1.png" class="page4tape1" width="70" height="20"/>
+<img src="afb/tape2.png" class="page4tape2" width="70" height="20"/>
+<div class="page4left">
 <form action="mainpage.php" method="post">
     <table>
     <tr>
         <td>
-            opdracht naam
+            opdracht naam 
         </td>
         <td>
         <input type="text" name="opnaam" required/>
