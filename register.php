@@ -46,10 +46,10 @@ if (isset($_POST["vnaam"])) {
     $pass = $_POST["pass"];
     $passconfirm = $_POST["passconfirm"];
 
-    $sql = "select * from `users` where `Email` like '".$email."'";
+    $sql2 = "select email from `users` where `Email` like '".$email."'";
 
-    $result = $conn->query($sql);
-    if (0 != $result->num_rows)
+    $result2 = $conn->query($sql);
+    if (0 != $result2->num_rows)
     {
         echo "email is al in gebruik";
     }
