@@ -2,7 +2,7 @@
 $sql = "select Bedrijfsnaam from users where  id =".$_SESSION["uID"];
 $result = $conn->query($sql);
 ?>
-<nav>
+<nav style="position: fixed; z-index: 99;">
     <ul>
         <li><a href="#home">home</a></li>
         <li><a href="#opdrachten">opdrachten</a></li>

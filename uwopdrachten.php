@@ -14,8 +14,8 @@ while ($row= $result->fetch_assoc()){
     echo  "<td>".$row["Opdrachtnaam"]."</td>";
     echo "<td><div class=\"button_cont\" align=\"center\"><button class=\"example_a\" rel=\"nofollow noopener\" type='button' onclick='fer".$row["ID"]."()'>meerinfo</button></td>";
     echo "<td>  <div class=\"button_cont\" align=\"center\"><button type='submit' value='".$row["ID"]."'  name='opID2' class=\"example_a\" rel=\"nofollow noopener\">foto toevoegen</button></div></div></td></form>";
+    echo "<td><form action='opdrachten%20aanpassen.php' method='post'> <div class=\"button_cont\" align=\"center\"><button type='submit' value='".$row["ID"]."'  name='aanpas' class=\"example_a\" rel=\"nofollow noopener\">opdrachten aanpassen</button></div></form></td>  ";
     echo "<td><form action='fotos.php' method='post'> <div class=\"button_cont\" align=\"center\"><button type='submit' value='".$row["ID"]."'  name='opID3' class=\"example_a\" rel=\"nofollow noopener\">fotos bekijken</button></div></form></td>  ";
-
     echo "<td><form action='mainpage.php' method='post'> <div class=\"button_cont\" align=\"center\"><button type='submit' value='".$row["ID"]."'  name='afrond' class=\"example_a\" rel=\"nofollow noopener\">afronden</button></div></form></td>  ";
 
     echo "</tr>";

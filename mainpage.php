@@ -13,6 +13,7 @@ require "dbs/dbconnect.php"
     <script src="main.js"></script>
 </head>
 <body>
+<link href="https://fonts.googleapis.com/css?family=Neucha|Permanent+Marker|Special+Elite&display=swap" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -20,7 +21,8 @@ require "dbs/dbconnect.php"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="jquery-3.4.0.min.js"></script>
-<script>
+<script type="text/javascript">
+
 $('.smooth').on('click', function() {
     $.smoothScroll({
         scrollElement: $('body'),
@@ -48,8 +50,29 @@ $('.smooth').on('click', function() {
 
       <div class="overlay">
       <div class="container">
-        <div class="row">
+        <div style="font-family: 'Special Elite', cursive;" class="row">
+        <div id="switcher" class="col">
+
         </div>
+        </div>
+          <script type="text/javascript">
+              var element =  document.getElementById("switcher");
+
+              window.setInterval(switcher, 1000);
+              function switcher() {
+                  if (element.innerHTML == "think it") {
+                      element.innerHTML = "make it";
+                  }
+                  else if (element.innerHTML == "make it") {
+                      element.innerHTML = "move it";
+                  }
+                  else{
+                      element.innerHTML = "think it";
+                  }
+
+              }
+
+          </script>
       </div>
     </div>
 
@@ -105,7 +128,7 @@ $('.smooth').on('click', function() {
         if ($row['Bedrijfsnaam'] == "docent") {
             include "register.php";
         }
-        else if ( $row['Bedrijfsnaam'] != "student"){
+        elseif ( $row['Bedrijfsnaam'] != "student"){
             include "opdrachten toevoegen.php";
         }
     }

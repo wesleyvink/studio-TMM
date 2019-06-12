@@ -9,13 +9,34 @@
     Email<br/>
     <input type="email" name="email" required><br/>
     bedrijfs naam<br/>
-    <input type="text" name="bedrijf" value="student" required><br/>
+    <label><input type="radio" name="bedrijf" value="student" title="student" onclick="disable()" required>student</label> <br/>
+    <label><input type="radio" name="bedrijf" value="docent" title="docent" onclick="disable()" required>docent</label><br/>
+    <label><input type="radio" name="bedrijf" value="client" title="client" onclick="enable()" required>client(selecteer hier onder de naam van het bedrijf)</label><br/>
+
+    <select  id="bedrf" name="bedrijfn" disabled>
+        <?php
+        $sql = "select * from bedrijven";
+        $result =$conn->query($sql);
+        while ($row = $result->fetch_assoc()) {
+            echo "<option>".$row["Bedrijfsnaam"]."</option>";
+        }
+        ?>
+    </select><br/>
     Wachtwoord<br/>
     <input type="password" name="pass" required><br/>
     Wachtwoord opnieuw invoeren<br/>
     <input type="password" name="passconfirm" required><br/>
     <button type="submit" class="example_a">registreer</button>
 </form>
+<script>
+    var bedrijfinput = document.getElementById("bedrf");
+    function enable() {
+        bedrijfinput.removeAttribute("disabled");
+    }
+    function disable() {
+        bedrijfinput.disabled= true;
+    }
+</script>
 <?php
 if (isset($_POST["vnaam"])) {
     $first = $_POST["vnaam"];
