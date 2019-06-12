@@ -30,5 +30,7 @@ while ($row= $result->fetch_assoc()){
     echo  "<td> <img  src='".$row["fotoloc"]."' style='height: 500px !important; width: auto; margin-left: 10%' width=20% /></td>";
     echo "</tr>";
 }
-echo "</table>";
+
+echo "<tr><td>
+        <a href=\"mainpage.php\"><button class=\"example_a btnPictureHome\">home</button></a></td></tr></table>";
 ?></div></html>
