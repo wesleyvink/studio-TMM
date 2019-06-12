@@ -101,6 +101,8 @@ $('.smooth').on('click', function() {
     ?>
 </div>
 <div id="page2">
+    <div class="row">
+    <div class="col"
   <a id="uw projecten" class="smooth"></a>
     <?php
     $sql = "select Bedrijfsnaam from users where  id =".$_SESSION["uID"];
@@ -114,6 +116,9 @@ $('.smooth').on('click', function() {
         }
     }
    ?>
+        </div>
+        </div>
+    </div>
 <div id="page3">
   <a id="archief" class="smooth"></a>
     <?php include "archief.php";?>

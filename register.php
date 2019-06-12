@@ -1,14 +1,22 @@
 <?php require "dbs/dbconnect.php"; ?>
 <form action="mainpage.php" method="POST">
-    Voornaam<br/>
+    <div class="page4banner">
+        <h1>Registreer een nieuwe gebruiker hier <i class="down"></i></h1>
+    </div>
+    <img src="afb/tape1.png" class="page4tape1" width="70" height="20"/>
+    <img src="afb/tape2.png" class="page4tape2" width="70" height="20"/>
+    <div class="page4left">
+    Voornaam :<br/>
     <input type="text" name="vnaam" required><br/>
-    Achternaam<br/>
+    Achternaam :<br/>
     <input type="text" name="anaam" required><br/>
-    Geboortedatum<br/>
+    Geboortedatum :<br/>
     <input type="date" name="datum" required><br/>
-    Email<br/>
+    Email :<br/>
     <input type="email" name="email" required><br/>
-    bedrijfs naam<br/>
+        </div>
+    <div class="page4right">
+    bedrijfs naam :<br/>
     <label><input type="radio" name="bedrijf" value="student" title="student" onclick="disable()" required>student</label> <br/>
     <label><input type="radio" name="bedrijf" value="docent" title="docent" onclick="disable()" required>docent</label><br/>
     <label><input type="radio" name="bedrijf" value="client" title="client" onclick="enable()" required>client(selecteer hier onder de naam van het bedrijf)</label><br/>
@@ -22,11 +30,14 @@
         }
         ?>
     </select><br/>
-    Wachtwoord<br/>
+    Wachtwoord :<br/>
     <input type="password" name="pass" required><br/>
-    Wachtwoord opnieuw invoeren<br/>
+    Wachtwoord opnieuw invoeren :<br/>
     <input type="password" name="passconfirm" required><br/>
+        </div>
+        <div class="page4submit">
     <button type="submit" class="example_a">registreer</button>
+        </div>
 </form>
 <script>
     var bedrijfinput = document.getElementById("bedrf");
