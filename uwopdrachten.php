@@ -3,7 +3,7 @@ if (isset($_POST["afrond"])){
     $sql = "UPDATE `opdrachten` SET `afgerond`= 1 WHERE ID LIKE ".$_POST["afrond"];
     $conn->query($sql) or die("Error : " . mysqli_error($conn));
 }
-$sql = "SELECT opdrachten.ID, Bedrijfsnaam,Opdrachtnaam,Opdrachtbeschrijving FROM `opdrachten` WHERE `Bedrijfsnaam` like 'echtbedrijf' and `afgerond` like 0";
+$sql = "SELECT opdrachten.ID, Bedrijfsnaam,Opdrachtnaam,Opdrachtbeschrijving FROM `opdrachten` WHERE `Bedrijfsnaam` like '".$_SESSION["role"]."' and `afgerond` like 0";
 $result = $conn->query($sql);
 echo "<table>";
 echo "<tr><th>bedrijfsnaam</th><th>opdrachtnaam</th><th>opdrachtbeschijving</th></tr>";

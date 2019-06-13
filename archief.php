@@ -8,7 +8,11 @@ echo "<h1>Gallerij</h1>";
 echo "<img src='afb/tape1.png' class='page3tape1' width='70' height='20'/>";
 echo "<img src='afb/tape2.png' class='page3tape2' width='70' height='20'/>";
 echo "</div>";
-echo "<table>";
+echo "<img src='afb/ArchivePic.jpg' class='Page3Art' width='200' height='350'>";
+echo "<img src='afb/tape1.png' class='page3tape3' width='70' height='20'/>";
+echo "<img src='afb/tape1.png' class='page3tape5' width='70' height='20'/>";
+echo "</img>";
+echo "<table style='margin-top: -408px;'>";
 echo "<tr><th>bedrijfsnaam</th><th>opdrachtnaam</th><th>opdrachtbeschijving</th></tr>";
 while ($row= $result->fetch_assoc()){
     echo "<tr>";
@@ -23,8 +27,5 @@ while ($row= $result->fetch_assoc()){
 }
 
 echo "</table></form>";
-echo "<img src='afb/ArchivePic.jpg' class='Page3Art' width='200' height='350'>";
-echo "<img src='afb/tape1.png' class='page3tape3' width='70' height='20'/>";
-echo "<img src='afb/tape1.png' class='page3tape5' width='70' height='20'/>";
-echo "</img>";
+
 ?>

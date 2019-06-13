@@ -35,15 +35,14 @@ if (isset($_POST["opnaam"]))
 {
     $sql5 = "select * from `opdrachten` where `Opdrachtnaam` like '".$_POST["opnaam"]."'";
     $result2 =$conn->query($sql5);
+        if (0 == $result2->num_rows) {
+            $sql = "INSERT INTO `opdrachten`(`Bedrijfsnaam`, `Opdrachtnaam`, `Opdrachtbeschrijving`, `afgerond`) VALUES ('" . $_SESSION['role'] . "','" . $_POST['opnaam'] . "','" . $_POST['opdesc'] . "',0)";
+            $conn->query($sql) or die("Error : " . mysqli_error($conn));
+            echo "<script type='text/javascript'>location.href = 'mainpage.php'</script>";
 
-    if ($result2 != null) {
-        $sql = "INSERT INTO `opdrachten`(`Bedrijfsnaam`, `Opdrachtnaam`, `Opdrachtbeschrijving`, `afgerond`) VALUES ('" . $_SESSION['role'] . "','" . $_POST['opnaam'] . "','" . $_POST['opdesc'] . "',0)";
-        $conn->query($sql) or die("Error : " . mysqli_error($conn));
-        echo "opdracht succesvol toegevoegd";
+        } else {
+            echo "<script type='text/javascript'>alert('er bestaat al een opdracht onder die naam')</script>";
 
-    }
-    else{
-        echo "er bestaat al een opdracht onder die naam";
-    }
+        }
 }
 ?>
