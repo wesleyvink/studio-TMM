@@ -124,16 +124,19 @@ $('.smooth').on('click', function() {
     <?php include "archief.php";?>
 
   </div>
-<div id="page4">
-  <a id="secret" class="smooth"></a>
-    <?php
-    $sql = "select Bedrijfsnaam from users where  id =".$_SESSION["uID"];
-    $result = $conn->query($sql);
-    while ($row = $result->fetch_assoc()) {
-        if ($row['Bedrijfsnaam'] == "docent") {
+<?php
+$sql = "select Bedrijfsnaam from users where  id =".$_SESSION["uID"];
+$result = $conn->query($sql);
+while ($row = $result->fetch_assoc()) {
+    if ($row['Bedrijfsnaam'] == "docent") {
+echo "<div id='page4'>";
+echo " <a id='secret' class='smooth'></a>";
+
             include "register.php";
         }
         elseif ( $row['Bedrijfsnaam'] != "student"){
+            echo "<div id='page4'>";
+            echo " <a id='secret' class='smooth'></a>";
             include "opdrachten toevoegen.php";
         }
     }

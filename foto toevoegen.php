@@ -57,11 +57,10 @@ if(isset($_POST['submit'])) {
         *	If file was successfully uploaded in the destination folder
         */
         if ($result) {
-            echo "Your file <html><b><i>" . $fileName . "</i></b></html> has been successfully uploaded";
             $query = "INSERT INTO `foto`(`OpdrachtID`, `foto`, `fotoloc`,omschrijving) VALUES ('$opID2','$fileName','$fileTarget','$desc')";
             $conn->query($query) or die("Error : " . mysqli_error($conn));
         } else {
-            echo "Sorry !!! There was an error in uploading your file";
+            echo "<script type='text/javascript' >alert('Sorry !!! There was an error in uploading your file)'</script>";
         }
         mysqli_close($conn);
     } else {

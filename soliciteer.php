@@ -27,7 +27,7 @@ else{
         <tr><td>cv</td><td>
                 <input type='file' name='cv' /></td> </tr><tr><td>motivatie</td><td>
                 <textarea style="height: 300px; width: 220%" name='motievatie'></textarea></td></tr>
-        <tr><td></td><td> <input class="example_a" name="submit" type='submit'/></td></tr>
+        <tr><td></td><td> <button class="example_a" name="submit" type='submit'>soliciteer</button> <a href="mainpage.php"><button class="example_a" type="button">home</button></a></td></tr>
     </table>
 </form>
 </div>
@@ -63,7 +63,6 @@ if(isset($_POST['submit'])) {
         }
         mysqli_close($conn);
     } else {
-        echo "Bestand <html><b><i>" . $fileName . "</i></b></html> bestaat al. Geef het een andere naam en probeer opnieuw.";
         mysqli_close($conn);
     }
 }
