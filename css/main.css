@@ -1,5 +1,13 @@
 /*	Main Page
 ------------------------------*/
+
+#switcher {
+    margin-top: 20%;
+    margin-left: 10%;
+    color: hotpink;
+    font-size: 200px;
+}
+
 #page1 {
     background-color: rgb(255, 255, 255);
     height: 500px;
