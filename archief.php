@@ -3,6 +3,9 @@ require "dbs/dbconnect.php";
 $sql = "SELECT  opdrachten.ID, Bedrijfsnaam,Opdrachtnaam,Opdrachtbeschrijving FROM `opdrachten` WHERE afgerond LIKE 1 ";
 $result = $conn->query($sql);
 echo "<form action='fotos.php' method='post'>";
+echo "<div class='page3banner'>";
+echo "<h1>Gallerij</h1>";
+echo "</div>";
 echo "<table>";
 echo "<tr><th>bedrijfsnaam</th><th>opdrachtnaam</th><th>opdrachtbeschijving</th></tr>";
 while ($row= $result->fetch_assoc()){
@@ -18,4 +21,9 @@ while ($row= $result->fetch_assoc()){
 }
 
 echo "</table></form>";
+echo "<img src='afb/tape1.png' class='page3tape1' width='70' height='20'/>";
+echo "<img src='afb/tape2.png' class='page3tape2' width='70' height='20'/>";
+echo "<img src='afb/ArchivePic.jpg' class='Page3Art' width='200' height='350'>";
+echo "<img src='afb/tape1.png' class='page3tape3' width='70' height='20'/>";
+echo "<img src='afb/tape1.png' class='page3tape5' width='70' height='20'/>";
 ?>
