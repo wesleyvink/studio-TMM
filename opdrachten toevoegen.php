@@ -33,9 +33,10 @@
 <?php
 if (isset($_POST["opnaam"]))
 {
-    $sql = "select * from `opdrachten` where `Opdrachtnaam` like '".$_POST["opnaam"]."'";
-    $result2 =$conn->query($sql);
-    if ($result2 == null) {
+    $sql5 = "select * from `opdrachten` where `Opdrachtnaam` like '".$_POST["opnaam"]."'";
+    $result2 =$conn->query($sql5);
+
+    if ($result2 != null) {
         $sql = "INSERT INTO `opdrachten`(`Bedrijfsnaam`, `Opdrachtnaam`, `Opdrachtbeschrijving`, `afgerond`) VALUES ('" . $_SESSION['role'] . "','" . $_POST['opnaam'] . "','" . $_POST['opdesc'] . "',0)";
         $conn->query($sql) or die("Error : " . mysqli_error($conn));
         echo "opdracht succesvol toegevoegd";
