@@ -6,10 +6,54 @@
     overflow: hidden;
 }
 
+.page1banner {
+    background-color: rgb(75, 0, 130);
+    height: 60px;
+}
+
+.page1banner h1 {
+    color: white;
+    margin-left: 43%;
+}
+
+.page1tape1 {
+    margin-top: -11%;
+    margin-left: -32px;
+    -webkit-transform: rotate(160deg);
+}
+
+.page1tape2 {
+    margin-top: -14%;
+    margin-left: 97.8%;
+    -webkit-transform: rotate(145deg);
+}
+
 #page2 {
     background-color: rgb(255, 0, 152);
     height: 500px;
     overflow: hidden;
+}
+
+.page2banner {
+    background-color: rgb(75, 0, 130);
+    height: 60px;
+}
+
+.page2banner h1 {
+    color: white;
+    margin-left: 41.5%;
+}
+
+.page2tape1 {
+    margin-top: -26%;
+    margin-left: -32px;
+    -webkit-transform: rotate(160deg);
+}
+
+.page2tape2 {
+    margin-top: -30%;
+    margin-left: 97.8%;
+    -webkit-transform: rotate(145deg);
 }
 
 #page3 {
@@ -279,20 +323,14 @@ p.lead
     display: inline-block;
     border: none;
     text-decoration: none;
+    margin-left: 20px;
+    margin-top: 7px;
 }
 
 .example_a:hover {
     background: rebeccapurple;
 }
 
-/*.example_a:hover {
-    background: rebeccapurple;
-    letter-spacing: 1px;
-    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-    box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
-    transition: all 0.4s ease 0s;
-}*/
 .container-fluid{
     padding-right: 0 !important;
 

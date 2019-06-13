@@ -12,6 +12,11 @@ elseif (isset($_POST["afw"])){
 }
 $sql ="select deelnemers.ID, cv, cvloc , motievatie, opdrachtnaam,Opdrachtbeschrijving,voornaam , achternaam from `deelnemers` INNER JOIN `opdrachten` ON `opdrachten`.`ID` = `deelnemers`.`OpdrachtID` INNER JOIN users on users.ID = deelnemers.UserID where `aangenomen` like 0 AND `opdrachten`.`Bedrijfsnaam` LIKE'".$_SESSION['role']."' ";
 $result = $conn->query($sql);
+echo "<div class='page1banner'>";
+echo "<h1>Soliciteren</h1>";
+echo "</div>";
+echo "<img src='afb/tape1.png' class='page1tape1' width='70' height='20'/>";
+echo "<img src='afb/tape2.png' class='page1tape2' width='70' height='20'/>";
 try {
     echo "<form action='mainpage.php' method='post'>";
     echo "<table>";
