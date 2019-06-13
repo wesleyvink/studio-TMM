@@ -20,7 +20,7 @@ elseif (isset($_SESSION['opID'])){
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
 </head>
     <div class="Picture" >
-<form style="margin-left: 30px; margin-top: 30px" action='soliciteer.php' method='post' enctype="multipart/form-data">
+<form style="margin-left: 30px; margin-top: 30px" action='mainpage.php' method='post' enctype="multipart/form-data">
     <table>
         <tr><td>cv</td><td>
                 <input type='file' name='cv' /></td> </tr><tr><td>motivatie</td><td>
