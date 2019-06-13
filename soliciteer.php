@@ -1,14 +1,12 @@
 
 <?php
-session_start();
 require "dbs/dbconnect.php";
-$opID = 1;
 $user = $_SESSION['uID'];
 if (isset($_POST['opID'])){
     $opID = $_POST['opID'];
     $_SESSION['opID'] = $opID;
 }
-else{
+elseif (isset($_SESSION['opID'])){
     $opID = $_SESSION['opID'];
 }
 

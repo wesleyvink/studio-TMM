@@ -8,7 +8,7 @@
     <table>
     <tr>
         <td>
-            opdracht naam 
+            opdracht naam
         </td>
         <td>
         <input type="text" name="opnaam" required/>
