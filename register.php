@@ -59,10 +59,10 @@ if (isset($_POST["vnaam"])) {
 
     $sql2 = "select email from `users` where `Email` like '".$email."'";
 
-    $result2 = $conn->query($sql);
+    $result2 = $conn->query($sql2);
     if (0 != $result2->num_rows)
     {
-        echo "email is al in gebruik";
+        echo "<script type='text/javascript'>alert('email is al in gebruik')</script>";
     }
     else
     {
@@ -70,13 +70,16 @@ if (isset($_POST["vnaam"])) {
         if ($pass == $passconfirm) {
 
             $bedrijf=$_POST["bedrijf"];
+            if ($bedrijf == "client"){
+                $bedrijf = $_POST["bedrijfn"];
+            }
 
             $result = $conn->query($sql);
                 $sql = "INSERT INTO `users`(`VoorNaam`, `AchterNaam`, `Geboortedatum`, `Email`, `Wachtwoord`, `Bedrijfsnaam`)
                 VALUES ('$first','$last','$birthdate','$email','$hashed','$bedrijf')";
                 if ($pass == $passconfirm) {
                     if ($conn->query($sql) === TRUE) {
-                        echo "account succesvol aangemaakt";
+                        echo "<script type='text/javascript'>alert('account succesvol aangemaakt')</script>";
                     } else {
                         echo "Error: " . $sql . "<br>" . $conn->error;
                     }
@@ -86,7 +89,7 @@ if (isset($_POST["vnaam"])) {
 
         }
         else {
-            echo "wachtwoorden zijn niet hetzelfde";
+            echo "<script type='text/javascript'>alert('wachtwoorden zijn niet hetzelfde')</script>";
         }
     }
 }
