@@ -8,6 +8,8 @@ $result = $conn->query($sql);
 echo "<div class='page2banner'>";
 echo "<h1>Uw Opdrachten</h1>";
 echo "</div>";
+echo "<img src='afb/tape1.png' class='page2tape1' width='70' height='20'/>";
+echo "<img src='afb/tape2.png' class='page2tape2' width='70' height='20'/>";
 echo "<table>";
 echo "<tr><th>bedrijfsnaam</th><th>opdrachtnaam</th><th>opdrachtbeschijving</th></tr>";
 while ($row= $result->fetch_assoc()){
@@ -27,6 +29,5 @@ while ($row= $result->fetch_assoc()){
 }</script>";
 }
 echo "</table>";
-echo "<img src='afb/tape1.png' class='page2tape1' width='70' height='20'/>";
-echo "<img src='afb/tape2.png' class='page2tape2' width='70' height='20'/>";
+
 ?>

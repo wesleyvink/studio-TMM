@@ -25,13 +25,13 @@
 }
 
 .page1tape1 {
-    margin-top: -11%;
+    margin-top: -90px;
     margin-left: -32px;
     -webkit-transform: rotate(160deg);
 }
 
 .page1tape2 {
-    margin-top: -14%;
+    margin-top: -155px;
     margin-left: 97.8%;
     -webkit-transform: rotate(145deg);
 }
@@ -53,13 +53,13 @@
 }
 
 .page2tape1 {
-    margin-top: -26%;
-    margin-left: -32px;
+    margin-top: -96px;
+    margin-left: -41px;
     -webkit-transform: rotate(160deg);
 }
 
 .page2tape2 {
-    margin-top: -30%;
+    margin-top: -167px;
     margin-left: 97.8%;
     -webkit-transform: rotate(145deg);
 }
